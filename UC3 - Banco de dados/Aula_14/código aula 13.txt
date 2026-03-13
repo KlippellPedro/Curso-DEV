@@ -1,0 +1,58 @@
+CREATE DATABASE tcheuber;
+USE tcheuber;
+
+CREATE TABLE veiculo(
+    id_veiculo int PRIMARY KEY AUTO_INCREMENT,
+    nome_p varchar(50) not null,
+    marca varchar(20) not null,
+    placa varchar(6) not null unique,
+    modelo varchar(20) not null,
+    ano int(4) not null
+)ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE servico(
+    id_motorista int PRIMARY KEY AUTO_INCREMENT,
+    nome_motorista varchar(50) not null,
+    nome_veiculo varchar(50) not null,
+    servico text(255) not null,
+    data_servico date not null,
+    placa varchar(6) not null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE mecanico(
+    id_mecanico int PRIMARY KEY AUTO_INCREMENT,
+    nome_mecanico varchar(50) not null,
+    celular bigint(11) not null UNIQUE,
+    cpf varchar(11) not null UNIQUE
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE motorista(
+    id_motorista int PRIMARY KEY AUTO_INCREMENT,
+    nome_motorista varchar(50) not null,
+    celular bigint(11) not null UNIQUE,
+    categoria varchar(5) not null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE DATABASE aeroporto;
+USE aeroporto;
+
+CREATE TABLE voo_aeroporto(
+    id_aeroporto int PRIMARY key AUTO_INCREMENT,
+    destino varchar(50) not null,
+    horario_che time not null,
+    horario_voo time not null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE empregados(
+    id_empregados int PRIMARY key AUTO_INCREMENT,
+    endereco varchar(50) not null,
+    telefone bigint(11) not null,
+    salario decimal(5,2) not null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE tecnico(
+    id_tecnico int PRIMARY key AUTO_INCREMENT,
+    nivel text(140) not null,
+    telefone bigint(11) not null,
+    nome varchar(50) not null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;

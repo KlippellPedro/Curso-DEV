@@ -1,0 +1,46 @@
+body{
+    background-color: wheat;
+}
+/* Podemos formatar pela tag, pelo id ou classe */
+h2{
+    color: blue;
+}
+#p1{
+    color: green;
+}
+.center{
+    text-align: center;
+}
+h3,h4{
+    color: #12abef;
+}
+.percentual{
+    font-size: 100%;
+}
+.em{
+    font-size: 2em;
+}
+.pt{
+    font-size: 14pt;
+}
+.px{
+    font-size: 14px;
+}
+.normal{
+    font-style: normal;
+}
+.italico{
+    font-style: italic;
+}
+.oblico{
+    font-style: oblique;
+}
+.centro{
+    text-align: center;
+}
+.direitra{
+    text-align: right;
+}
+.justificada{
+    text-align: justify;
+}

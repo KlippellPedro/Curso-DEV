@@ -1,0 +1,37 @@
+CREATE DATABASE banco002;
+USE banco002;
+
+CREATE TABLE tabela01(
+    id_tabela01 int PRIMARY KEY AUTO_INCREMENT,
+    nome_completo varchar(100) not null,
+    endereco varchar(50) not null,
+    idade int(3) null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE tabela002(
+    id_tabela002 int PRIMARY KEY AUTO_INCREMENT,
+    produto varchar(100) not null,
+    marca varchar(100) not null,
+    modelo varchar(100) not null,
+    quantidade int(4) not null,
+    data_entrada date not null,
+    obs text(140) null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+ALTER TABLE tabela01 ADD email varchar(50) not null;
+ALTER TABLE tabela01 ADD cidade VARCHAR(50) not null AFTER idade;
+ALTER TABLE tabela01 ADD estado char(2) not null AFTER cidade;
+ALTER TABLE tabela002 ADD peso float(3,2) NOT null AFTER modelo;
+ALTER TABLE tabela002 ADD validade date not null AFTER peso;
+ALTER TABLE tabela01 ADD sobrenome varchar(50) not null AFTER nome_completo;
+ALTER TABLE tabela01 CHANGE endereco logradouro varchar(60)not null;
+ALTER TABLE tabela01 CHANGE estado uf char(2) not null;
+ALTER TABLE tabela01 MODIFY nome varchar(60) not null;
+ALTER TABLE tabela01 MODIFY sobrenome varchar(60) not null;
+ALTER table tabela01 CHANGE idade idade int(3) not null AFTER sobrenome;
+ALTER TABLE tabela002 MODIFY modelo varchar(90) not null;
+ALTER TABLE tabela002 MODIFY quantidade int(5) not null;
+ALTER TABLE tabela002 MODIFY quantidade int(5) not null;
+ALTER TABLE tabela002 MODIFY peso float(4,2) not null;
+ALTER TABLE tabela01 DROP COLUMN idade;
+ALTER TABLE tabela002 DROP COLUMN obs;

@@ -1,0 +1,15 @@
+-- Relatório de notas dos alunos --
+
+Disciplina: mat
+Professor: jose
+Data do relatório: 02/06/2025 11:25:13
+
+Registro realizado em: 02/06/2025 11:25:05
+Nome: pedro
+Turma: 12
+Notas: 9, 9, 9
+Média final: 9.0
+Situação curricular: Aprovado
+
+
+Média geral da turma: 9.00

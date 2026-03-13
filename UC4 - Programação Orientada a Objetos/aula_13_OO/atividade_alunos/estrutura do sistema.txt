@@ -1,0 +1,14 @@
+sorveteria_tabajara/
+│
+├── main.py                        → Arquivo principal (executa o programa)
+│
+├── models/                        → Classes principais do sistema
+│   ├── __init__.py
+│   ├── picole.py                   → Define os sabores de picolé
+│   ├── pedido.py                   → Representa os pedidos de picolés
+│   ├── pagamento.py                → Gerencia as opções e cálculos de pagamento
+│
+├── services/                      → Funcionalidades e operações
+│   ├── __init__.py
+│   ├── menu.py                     → Exibe menus de compra e pagamento
+│   └── sorveteria.py               → Classe que controla a sorveteria (fluxo completo)

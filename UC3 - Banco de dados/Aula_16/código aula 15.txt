@@ -1,0 +1,54 @@
+CREATE DATABASE banco003;
+USE banco003;
+
+CREATE TABLE tabela01(
+    id_tabela01 int PRIMARY KEY AUTO_INCREMENT,
+    nome_completo varchar(100) not null,
+    endereco varchar(50) not null,
+    idade int(3) null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+CREATE TABLE tabela02(
+    id_tabela02 int PRIMARY KEY AUTO_INCREMENT,
+    produto varchar(100) not null,
+    marca varchar(100) not null,
+    modelo varchar(100) not null,
+    quantidade int(4) not null,
+    data_entrada date not null,
+    obs text(140) null
+    )ENGINE=INNODB DEFAULT CHARSET=UTF8;
+
+INSERT INTO tabela01(nome_completo, endereco, idade)
+VALUES('Ándre da Silva', 'Venâncio Aires número 93', 20);
+
+INSERT INTO tabela01(nome_completo, endereco, idade)
+VALUES('Ana da Silva', 'Lima e Silva número 00', 60);
+
+INSERT INTO tabela01(id_tabela01, nome_completo, endereco, idade)
+VALUES(null, 'Paula da Silva', 'Andradas número 01', 33);
+
+INSERT INTO tabela01(nome_completo, endereco, idade)
+VALUES('Régis da Silva', 'José do Patrocício número 02', 60),('Gilmar da Silva', 'Silva só número 03', 55);
+
+INSERT INTO tabela01(nome_completo, endereco, idade)
+VALUES('Clotilde da Silva', 'Lima e Silva', '');
+
+INSERT INTO tabela01(nome_completo, endereco)
+VALUES('Valdisney da Silva', 'Lima e Silva');
+
+INSERT INTO tabela01
+SET
+id_tabela01 = NULL,
+nome_completo = 'Ruberval da Silva',
+endereco = 'Venâncio Aires número 11',
+idade = 20;
+
+INSERT INTO tabela01
+SET
+nome_completo = 'Jair Lindo',
+endereco = 'Lima e Silva',
+idade = 44;
+
+INSERT INTO tabela02(produto, marca, modelo, quantidade, data_entrada, obs)
+VALUES
+('Carro', 'Fiat', 'Siena', 2, 14-07-2025, 'Táxi');

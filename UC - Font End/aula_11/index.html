@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <title>Introdução ao CSS</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="./css/estilo.css" />
+    <style>
+        h1{text-align: center;
+        color: blue;
+        font: 20px;}
+        #pid{
+            text-align: center;color: blueviolet;
+        }
+        /*
+
+        */
+        .pclasse{
+            text-align: right;color: pink;
+        }
+    </style>
+</head>
+<body>
+    
+<h1>Tipos de CSS</h1>
+<p>Existem três tipos de formas de declarar o CSS</p>
+<p>Inline, interno e externo</p>
+
+<h2>CSS INLINE</h2>
+<p>Na formatação da página HTML, utilizando o CSS inline, os codigos CSS são declarados, como atributos nas tags HTML</p>
+
+<p style="color: red; font-size: 30px; font-family: Arial;">Novo paragrafo com a mesma formatação do anterior</p>
+
+<h1>CSS INTERNO</h1>
+<p>No CSS, a declaração de fomratação do site, é realizada no cabeçalho da pagina, entre a tag head.<br />Formatação pela tag</p>
+
+<!--Normalmente usado uma vez por ser um id é visto como unico-->
+<p id="pid">Formatação pelo ID</p>
+
+<!--Normalmente usado para varias coisas no codigo-->
+<p class="pclasse">Formatação pela classe</p>
+<p class="pclasse">Continuação da classe</p>
+<p class="pclasse">Continuação da classe</p>
+
+<h1>CSS EXTERNO</h1>
+<p id="p1">
+    No CSS externo, a formatação do HTML pelo CSS não é realizada na página HTML, como o inline e o interno.<br />
+    No CSS externo, ou criamos um arquivo .css, ou utilizamos algum, disponibilizado na internet.
+</p>
+<p class="center"> Primeiro parágrafo formatado com classe</p>
+<p class="center"> Segundo parágrafo formatado com classe</p>
+
+<h3>Unidade de medidas no CSS</h3>
+<p class="percentual">Utilizando medida em percentual</p>
+<p class="em">Utilizando medida em</p>
+<p class="pt">Utilizando medida em pt (pontos)</p>
+<p class="px">Utilizando medida em px (pixel)</p>
+
+<h3>Estilos de fontes</h3>
+<p class="normal">Parágrafo normal</p>
+<p class="italico">Parágrafo itálico</p>
+<p class="oblico">Parágrafo oblico</p>
+
+<h3>Alinhamento de texto</h3>
+<p class="centro">Parágrafo alinhado no centro</p>
+<p class="direita">Parágrafo alinahdo na direita</p>
+<p class="justificada">Parágrafo alinhado justificado</p>
+
+</body>
+</html>
