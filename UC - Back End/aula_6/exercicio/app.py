@@ -28,7 +28,7 @@ def dados():
     
     
     # Verificar se os dados foram enviados
-    if nome and idade:
+    if nome and data_nasc and idade and endereco and bairro and cidade and estado and celular and email and cpf and rg:
         mensagem= "Aqui estão seus dados!"
     else:
         mensagem= "Nenhum dado foi enviado."
