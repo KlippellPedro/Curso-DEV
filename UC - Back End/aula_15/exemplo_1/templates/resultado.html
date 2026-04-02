@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Folha de pagamento</title>
+</head>
+<body>
+    <h2>Folha gerada com sucesso</h2>
+    <p>Funcionário: {{ f.nome }}</p>
+    <p>Matrícula: {{ f.matricula }}</p> 
+    <p>Salário líquido R$: {{ "%.2f"|format(f.salario_liquido) }}</p>
+    <p>O PDF foi gerado com sucesso! Salvo na pasta "contracheques"</p>
+    <a href="/">Voltar</a>
+</body>
+</html>
