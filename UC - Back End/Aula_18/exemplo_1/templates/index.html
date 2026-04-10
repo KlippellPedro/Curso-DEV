@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro na agenda</title>
+</head>
+<body>
+    <h1>Cadastro na agenda</h1>
+    <form method="post" action="/cadastrar">
+        <input type="text" name="nome" placeholder="Nome" required />
+        <br />
+        <input type="email" name="email" placeholder="E-mail" required />
+        <br />
+        <input type="tel" name="fone" placeholder="Telefone" required />
+        <br />
+        <input type="date" name="data" required/>
+        <br />
+        <input type="submit" value="Cadastrar" />
+    </form>
+    <br />
+    <hr />
+    <!-- Botão para listar os contatos gravados no banco-->
+     <a href="/listar">
+        <button type="button">Ver contatos cadastrados</button>
+     </a>
+    
+</body>
+</html>

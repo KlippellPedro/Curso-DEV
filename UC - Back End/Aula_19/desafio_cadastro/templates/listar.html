@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de clientes</title>
+</head>
+<body>
+    <h1>Registro dos clientes cadastrados com sucesso</h1>
+    <table border="1">
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>Sobrenome</th>
+            <th>Endereço</th>
+            <th>Numero</th>
+            <th>Complemento</th>
+            <th>Bairro</th>
+            <th>Cidade</th>
+            <th>Estado</th>
+            <th>Data de nascimento</th>
+            <th>CPF</th>
+            <th>RG</th>
+            <th>Telefone</th>
+            <th>E-mail</th>
+        </tr>
+        {% for cliente in clientes %}
+        <tr>
+            <td>{{ cliente["id"] }}</td>
+            <td>{{ cliente["nome"] }}</td>
+            <td>{{ cliente["sobrenome"] }}</td>
+            <td>{{ cliente["endereco"] }}</td>
+            <td>{{ cliente["numero"] }}</td>
+            <td>{{ cliente["comple"] }}</td>
+            <td>{{ cliente["bairro"] }}</td>
+            <td>{{ cliente["cidade"] }}</td>
+            <td>{{ cliente["estado"] }}</td>
+            <td>{{ cliente["data_nasc"] }}</td>
+            <td>{{ cliente["cpf"] }}</td>
+            <td>{{ cliente["rg"] }}</td>
+            <td>{{ cliente["email"] }}</td>
+            <td>{{ cliente["telefone"] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br />
+    <a href="/">Voltar</a>
+    
+</body>
+</html>
