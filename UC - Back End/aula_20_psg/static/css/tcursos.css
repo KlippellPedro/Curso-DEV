@@ -1,0 +1,24 @@
+table{
+    width: 100%;
+    height: auto;
+}
+.tdHeaderFooter{
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    padding-top: 3%;
+    padding-bottom: 1%;
+    color: white;
+    background-color: black;
+}
+.tdHeadCont1, .tdHeadCont2{
+    width: 33.33%;
+    vertical-align: middle;
+    text-align: center;
+}
+.tdHeadCont1{
+    background-color: #c0c0c0;
+}
+.tdHeadCont2{
+    background-color: #dcdcdc;
+}

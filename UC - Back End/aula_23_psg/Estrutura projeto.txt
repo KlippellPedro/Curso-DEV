@@ -1,0 +1,57 @@
+Aula_17_psg/
+│
+├── index.html
+├── pdf/
+    |--diretrizes.pdf
+    |--regulamento.pdf 	
+├── pages/
+    |--consulta.html
+    |--fale conosco.html
+    |--inscrever.html
+    |--perguntas.html 
+├── img/
+    |--várias imagens nessa pasta
+├── css/
+    |--estilo.css
+    |--formulário.css
+    |--layout.css
+    |--layout2.css
+    |--menu.css
+    |--reset.css
+    |--tcursos.css
+
+________________________________________
+Nova estrutura
+
+Aula_17_psg/
+│
+├── app.py                ← Arquivo principal Flask
+├── database.db           ← Banco SQLite (será criado automaticamente)
+├── requirements.txt      ← Dependências do projeto
+│
+├── templates/            ← TODOS os HTML ficam aqui
+│   │ index.html
+│   └── pages/
+│       │ consulta.html
+│       │ fale_conosco.html
+│       │ inscrever.html
+│       │ perguntas.html
+│
+├── static/               ← Arquivos estáticos
+│   ├── css/
+│   │   │ estilo.css
+│   │   │ formulario.css
+│   │   │ layout.css
+│   │   │ layout2.css
+│   │   │ menu.css
+│   │   │ reset.css
+│   │   │ tcursos.css
+│   │
+│   ├── img/
+│   │   │ (todas as imagens)
+│   │
+│   └── pdf/
+│       │ diretrizes.pdf
+│       │ regulamento.pdf
+│
+└── instance/             ← (opcional para configs futuras)

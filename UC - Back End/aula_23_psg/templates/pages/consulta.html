@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Programa Senac de gratuidade</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/tcursos.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+
+<body>
+    <main>
+        <header>
+            <section id="cabecalho"><!--Inicio section cabecalho-->
+                <div id="cabecalhoEsq"><!--Inicio div cabecalhoEsq-->
+                    <a href="{{ url_for('index') }}">
+                        <img src="{{ url_for('static', filename='img/senac_logo_new.png') }}" alt="Logotipo Senac"
+                            title="Logotipo Senac">
+                    </a>
+                </div><!--Fim div cabecalhoEsq-->
+                <div id="cabecalhoMeio"><!--Inicio div cabecalhoMeio-->
+                    <p id="pCabecalhoMeio">
+                        Rio Grande do Sul
+                    </p>
+                </div><!--Fim div cabecalhoMeio-->
+                <div id="cabecalhoDir"><!--Inicio div cabecalhoDir-->
+                    <p id="plink">
+                        <a class="linkRedes" href="https://www.facebook.com/senacrsoficial" target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_facebook.png') }}"
+                                alt="Logotipo Facebook" title="Logotipo Facebook">
+                        </a>
+
+                        <a class="linkRedes" href="https://x.com/senacrs" target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_twitter.png') }}"
+                                alt="Logotipo X-Twitter" title="Logotipo X-Twitter">
+                        </a>
+
+                        <a class="linkRedes" href="https://www.linkedin.com/school/senac-rs/posts/?feedView=all"
+                            target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_linkedin.png') }}"
+                                alt="Logotipo Linkedin" title="Logotipo Linkedin">
+                        </a>
+
+                        <a class="linkRedes" href="https://www.youtube.com/senacrsoficial" target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_youtube.png') }}"
+                                alt="Logotipo Youtube" title="Logotipo Youtube">
+                        </a>
+
+                        <a class="linkRedes" href="https://www.instagram.com/senacrs/" target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_instagram.png') }}"
+                                alt="Logotipo Instagram" title="Logotipo Instagram">
+                        </a>
+                    </p>
+                </div><!--Inicio div cabecalhoDir-->
+            </section><!--Fim section cabecalho-->
+        </header>
+        <hr class="hr1" />
+        <section>
+            <input type="checkbox" id="bt_menu" />
+            <label for="bt_menu">&#9776;</label>
+            <nav id="menu"><!--Inicio nav menu-->
+                <ul>
+                    <li>
+                        <a href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('oprograma') }}">Programa</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('inscrever') }}">Inscrever</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('consulta') }}">Consulta</a>
+                        <ul>
+                            <li>
+                                <a href="{{ url_for('consulta') }}#tecnico">Técnico</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('consulta') }}#trilha">Trilha</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('consulta') }}#livre">Livre</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('perguntas') }}">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('fale_conosco') }}">Fale conosco</a>
+                    </li>
+                </ul>
+            </nav><!--Fim nav menu-->
+        </section>
+
+        <!-- Comentário no html-->
+        <hr id="hr2" />
+        <section id="sectionMeio"><!--Inicio sectionMeio-->
+            <article id="articleBannerSup"><!--Inicio articleBannerSup-->
+                <img id="imgBanner" src="{{ url_for('static', filename='img/banner_programa.jpg') }}"
+                    alt="Imagem representando o banner do programa Senac gratuidade"
+                    title="Banner programa Senac Gratuidade" />
+            </article><!--Fim articleBannerSup-->
+            <article id="articleInformacoesSup"><!--Inicio articleInformacoesSup-->
+                <h1 class="h2">
+                    Senac-RS oferece mais de 2.000 vagas gratuitas para cursos técnicos presenciais.
+                </h1>
+                <h3 id="h3">
+                    Confira os cursos em destaque!
+                </h3>
+                <p class="pText">
+                    <a href="#tecnico">Cursos Técnicos</a>-
+                    <a href="#trilha">Trilha RS TI</a>-
+                    <a href="#livre">Cursos Livres</a>
+                </p>
+                <h2 id="h3">
+                    Conheça o regulamento
+                </h2>
+                <p class="pText">
+                    <!--<a href="../pdf/regulamento.pdf" target="_blank">-->
+                    <a href="{{ url_for('static', filename='pdf/regulamento.pdf') }}" target="_blank">
+                        Clique aqui para acessar o regulamento
+                    </a>
+                </p>
+                <h2 id="h3">
+                    Garanta agora a sua vaga em nossos cursos
+                </h2>
+
+                <!--Continuação do código......-->
+
+                <p class="pText">
+                    <a href="https://apsweb.senacrs.com.br/modulos/vestibular/" target="_blank">
+                        Clique aqui para realizar a sua inscrição
+                    </a>
+                </p>
+            </article><!--Fim articleInformacoesSup-->
+            <article id="articleBannerPsg"><!--Inicio articleBannerPsg-->
+                <p class="p1">
+                    <img id="imgBannerPsg" src="{{ url_for('static', filename='img/card_cursos.jpg') }}"" alt=" Banner
+                        sobre os cursos gratuitos" title="Banner programa" />
+                </p>
+            </article><!--Fim articleBannerPsg-->
+            <article class="articleCursos"><!--Inicio articleCursos-->
+                <div class="divTextCursos"><!--Inicio divTextCursos-->
+                    <h1 id="tecnico" class="h2">
+                        Confira os cursos Técnicos gratuitos em destaque!
+                    </h1>
+                </div><!--Fim divTextCursos-->
+                <div class="divCardsCursos"><!--Inicio divCardsCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/tec_adm.jpg') }}"
+                                alt="Técnico em administração" title="Técnico em administração" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/tec_comer.jpg') }}"
+                                alt="Técnico comercio exterior" title="Técnico comercio exterior" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/tec_dev.jpg') }}"
+                                alt="Técnico em desenvolvimento de sistemas"
+                                title="Técnico em desenvolvimento de sistemas" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/tec_enf.jpg') }}" alt="Técnico em enfermagem"
+                                title="Técnico em enfermagem" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/tec_mark.jpg') }}" alt="Técnico em Marketing"
+                                title="Técnico em Marketing" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/tec_podo.jpg') }}" alt="Técnico em Podologia"
+                                title="Técnico em Podologia" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/tec_recur.jpg') }}"
+                                alt="Técnico em Recursos humanos" title="Técnico em Recursos humanos" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                </div><!--Fim divCardsCursos-->
+            </article><!--Fim articleCursos-->
+            <hr class="hr2" />
+            <article class="articleCursos"><!--Inicio articleCursos-->
+                <div class="divTextCursos"><!--Inicio divTextCursos-->
+                    <h1 id="trilha" class="h2">
+                        Confira as trilhas gratuitas em destaque!
+                    </h1>
+                </div><!--Fim divTextCursos-->
+                <div class="divCardsCursos"><!--Inicio divCardsCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/trilha_dev_front.jpg') }}"
+                                alt="Trilha desenvolvimento front-end" title="Trilha desenvolvimento front-end" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/trilha_pro_sis.jpg') }}"
+                                alt="Trilha programador de sistemas" title="Trilha programador de sistemas" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/trilha_prog_web.jpg') }}"
+                                alt="Trilha programador web" title="Trilha programador web" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                </div><!--Fim divCardsCursos-->
+            </article><!--Fim articleCursos-->
+
+            <!--Continuamos aq amanhã.......-->
+
+            <hr class="hr2" />
+            <article class="articleCursos"><!--Inicio articleCursos-->
+                <div class="divTextCursos"><!--Inicio divTextCursos-->
+                    <h1 id="livre" class="h2">
+                        Confira os cursos livres gratuitos em destaque!
+                    </h1>
+                </div><!--Fim divTextCursos-->
+                <div class="divCardsCursos"><!--Inicio divCardsCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/livre_assis.jpg') }}"
+                                alt="Assistente administrativo" title="Assistente administrativo" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/livre_cozi.jpg') }}" alt="Auxiliar de cozinha"
+                                title="Auxiliar de cozinha" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="p1">
+                            <img src="{{ url_for('static', filename='img/livre_recur.jpg') }}"
+                                alt="Assistente de recursos humanos" title="Assistente de recursos humanos" />
+                        </p>
+                    </div><!--Fim divCursos-->
+                </div><!--Fim divCardsCursos-->
+            </article><!--Fim articleCursos-->
+            <hr class="hr2">
+            <!--Nova formatação para sustituir a tabela-->
+            <article class="articleCursos"><!--Inicio articleCursos-->
+                <div class="divTextCursos"><!--Inicio divTextCursos-->
+                    <h1 class="h2">
+                        Confira os demais cursos gratuitos em destaque!
+                    </h1>
+                </div><!--Fim divTextCursos-->
+                <div class="divCardsCursos"><!--Inicio divCardsCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/tec_administracao.jpg') }}"
+                                alt="Técnico em administração" title="Técnico em administração" />
+                            <br />
+                            Escola: Senac Camaquã
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/tec_comercio.jpg') }}"
+                                alt="Técnico em comércio exterior" title="Técnico em comércio exterior" />
+                            <br />
+                            Escola: Senac Rio Grande
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/tec_dev_sistemas.jpg') }}"
+                                alt="Técnico em desenvolvimento de sistemas"
+                                title="Técnico em desenvolvimento de sistemas" />
+                            <br />
+                            Escola: Senac Taquara
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                </div><!--Fim divCardsCursos-->
+            </article><!--Fim articleCursos-->
+            <article class="articleCursos"><!--Inicio articleCursos-->
+                <div class="divCardsCursos"><!--Inicio divCardsCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/trilha_dev.jpg') }}"
+                                alt="Trilha desenvolvimento Front-end" title="Trilha desenvolvimento Front-end" />
+                            <br />
+                            Escola: Senac Santa Rosa
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/trilha_web.jpg') }}"
+                                alt="Trilha programador web" title="Trilha programador web" />
+                            <br />
+                            Escola: Senac Lajeado
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/trilha_prog.jpg') }}"
+                                alt="Trilha programador de sistemas" title="Trilha programador de sistemas" />
+                            <br />
+                            Escola: Senac Montenegro
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                </div><!--Fim divCardsCursos-->
+            </article><!--Fim articleCursos-->
+            <article class="articleCursos"><!--Inicio articleCursos-->
+                <div class="divCardsCursos"><!--Inicio divCardsCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/livre_enfer.jpg') }}"
+                                alt="Aperfeiçoamento em enfermagem em terapia intensiva"
+                                title="Aperfeiçoamento em enfermagem em terapia intensiva" />
+                            <br />
+                            Escola: Senac Canoas
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/livre_miofacial.jpg') }}"
+                                alt="Aperfeiçoamento em liberação miofacial"
+                                title="Aperfeiçoamento em liberação miofacial" />
+
+                            <br />
+                            Escola: Senac Canoas
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                    <div class="divCursos"><!--Inicio divCursos-->
+                        <p class="pText">
+                            <img class="imgTabela" src="{{ url_for('static', filename='img/livre_assistente.jpg') }}"
+                                alt="Assistente administrativo" title="Assistente administrativo" />
+                            <br />
+                            Escola: Senac São Leopoldo
+                            <br />
+                            Inscrição: 26/02/2026 a 01/03/2026
+                            <br />
+                            Modalidade: Presencial
+                            <br />
+                            Vagas: 12
+                            <br />
+                            Turma: Manhã
+                        </p>
+                    </div><!--Fim divCursos-->
+                </div><!--Fim divCardsCursos-->
+            </article><!--Fim articleCursos-->
+
+
+            <hr class="hr2">
+            <h2 id="h3">
+                Confira os demais cursos gratuitos disponíveis.
+            </h2>
+            <!--Formatação da tabela-->
+            <article id="articleTabela"><!--Inicio articleTabela-->
+                <div id="divTabela"><!--Inicio divTabela-->
+                    <table>
+                        <thead><!--Cabeçalho da tabela-->
+                            <tr><!--Linha da tabela-->
+                                <td class="tdHeaderFooter"><!--Coluna da tabela-->
+                                    <h3>Escola</h3>
+                                </td>
+                                <td class="tdHeaderFooter">
+                                    <h3>Informações</h3>
+                                </td>
+                                <td class="tdHeaderFooter">
+                                    <h3>Curso</h3>
+                                </td>
+                            </tr>
+                        </thead>
+                        <tbody><!--Corpo da tabela-->
+                            <tr>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">Senac Camaquâ</h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: Presencial
+                                        <br />
+                                        Vagas: 12
+                                        <br />
+                                        Turno: Manhã
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <img class="imgTabela"
+                                        src="{{ url_for('static', filename='img/tec_administracao.jpg') }}"
+                                        alt="Técnico em administração" title="Técnico em administração" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdHeadCont2">
+                                    <h3 class="h3Td">Senac Rio Grande</h3>
+                                </td>
+                                <td class="tdHeadCont2">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: Presencial
+                                        <br />
+                                        Vagas: 15
+                                        <br />
+                                        Turno: Noite
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont2">
+                                    <img class="imgTabela"
+                                        src="{{ url_for('static', filename='img/tec_comercio.jpg') }}"
+                                        alt="Técnico em comércio exterior" title="Técnico em comércio exterior" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">Senac Taquara</h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: On-line
+                                        <br />
+                                        Vagas: 50
+                                        <br />
+                                        Turno: Noite
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <img class="imgTabela"
+                                        src="{{ url_for('static', filename='img/tec_dev_sistemas.jpg') }}"
+                                        alt="Técnico em desenvolvimento de sistemas"
+                                        title="Técnico em desenvolvimento de sistemas" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdHeadCont2">
+                                    <h3 class="h3Td">Senac Santa Rosa</h3>
+                                </td>
+                                <td class="tdHeadCont2">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: On-line
+                                        <br />
+                                        Vagas: 50
+                                        <br />
+                                        Turno: Noite
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont2">
+                                    <img class="imgTabela" src="{{ url_for('static', filename='img/trilha_dev.jpg') }}"
+                                        alt="Trilha desenvolvimento Front-end"
+                                        title="Trilha desenvolvimento Front-end" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">Senac Lajeado</h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: Presencial
+                                        <br />
+                                        Vagas: 20
+                                        <br />
+                                        Turno: Tarde
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <img class="imgTabela" src="{{ url_for('static', filename='img/trilha_web.jpg') }}"
+                                        alt="Trilha programador web" title="Trilha programador web" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdHeadCont2">
+                                    <h3 class="h3Td">Senac Montenegro</h3>
+                                </td>
+                                <td class="tdHeadCont2">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: Presencial
+                                        <br />
+                                        Vagas: 20
+                                        <br />
+                                        Turno: Noite
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont2">
+                                    <img class="imgTabela" src="{{ url_for('static', filename='img/trilha_prog.jpg') }}"
+                                        alt="Trilha programador de sistemas" title="Trilha programador de sistemas" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">Senac Canoas</h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: Presencial
+                                        <br />
+                                        Vagas: 20
+                                        <br />
+                                        Turno: Manhã
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <img class="imgTabela" src="{{ url_for('static', filename='img/livre_enfer.jpg') }}"
+                                        alt="Aperfeiçoamento em enfermagem em terapia intensiva"
+                                        title="Aperfeiçoamento em enfermagem em terapia intensiva" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdHeadCont2">
+                                    <h3 class="h3Td">Senac Canoas</h3>
+                                </td>
+                                <td class="tdHeadCont2">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: Presencial
+                                        <br />
+                                        Vagas: 20
+                                        <br />
+                                        Turno: Manhã
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont2">
+                                    <img class="imgTabela"
+                                        src="{{ url_for('static', filename='img/livre_miofacial.jpg') }}"
+                                        alt="Aperfeiçoamento em liberação miofacial"
+                                        title="Aperfeiçoamento em liberação miofacial" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">Senac São Leopoldo</h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <h3 class="h3Td">
+                                        Inscrições: 09/12/2025 a 10/03/2026
+                                        <br />
+                                        Modalidade: Presencial
+                                        <br />
+                                        Vagas: 25
+                                        <br />
+                                        Turno: Tarde
+                                    </h3>
+                                </td>
+                                <td class="tdHeadCont1">
+                                    <img class="imgTabela"
+                                        src="{{ url_for('static', filename='img/livre_assistente.jpg') }}"
+                                        alt="Assistente administrativo" title="Assistente administrativo" />
+                                </td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <td class="tdHeaderFooter" colspan="3">
+                                    <h3>Senac Tech - Mudando a vida!</h3>
+                                </td>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div><!--Fim divTabela-->
+            </article><!--Fim articleTabela-->
+        </section><!--Fim sectionMeio-->
+        <footer>
+
+
+            <hr id="hr4" />
+            <article id="articleFooter"><!--Inicio articleFooter-->
+                <p class="p1">
+                    <a href="{{ url_for('index') }}">
+                        <img src="{{ url_for('static', filename='img/logo_branco.png') }}" alt="Logotipo Senac"
+                            title="Logotipo Senac">
+                    </a>
+                </p>
+                <p class="p1">
+                    <a class="linkRedes" href="https://www.facebook.com/senacrsoficial" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_facebook.png') }}"
+                            alt="Logotipo Facebook" title="Logotipo Facebook">
+                    </a>
+
+                    <a class="linkRedes" href="https://x.com/senacrs" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_twitter.png') }}"
+                            alt="Logotipo X-Twitter" title="Logotipo X-Twitter">
+                    </a>
+
+                    <a class="linkRedes" href="https://www.linkedin.com/school/senac-rs/posts/?feedView=all"
+                        target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_linkedin.png') }}"
+                            alt="Logotipo Linkedin" title="Logotipo Linkedin">
+                    </a>
+
+                    <a class="linkRedes" href="https://www.youtube.com/senacrsoficial" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_youtube.png') }}"
+                            alt="Logotipo Youtube" title="Logotipo Youtube">
+                    </a>
+
+                    <a class="linkRedes" href="https://www.instagram.com/senacrs/" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_instagram.png') }}"
+                            alt="Logotipo Instagram" title="Logotipo Instagram">
+                    </a>
+                </p>
+                <p id="pDireitos">
+                    © Todos os direitos reservados - 2026
+                </p>
+            </article><!--Fim articleFooter-->
+        </footer>
+    </main>
+</body>
+
+</html>

@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Programa Senac de gratuidade</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/reset.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/estilo.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/layout2.css')}}" />
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/menu.css')}}" />
+</head>
+
+<body>
+    <header>
+        <section id="cabecalho"><!--Inicio section cabecalho-->
+            <div id="cabecalhoEsq"><!--Inicio div cabecalhoEsq-->
+                <p class="p1">
+                    <a href="{{ url_for('index')}}">
+                        <img src="{{ url_for('static', filename='img/senac_logo_new.png')}}" alt="Logotipo Senac"
+                            title="Logotipo Senac" />
+                    </a>
+                </p>
+            </div><!--Fim div cabecalhoEsq-->
+            <div id="cabecalhoMeio"><!--Inicio div cabecalhoMeio-->
+                <p id="pCabecalhoMeio">
+                    Rio Grande do Sul
+                </p>
+            </div><!--Fim div cabecalhoMeio-->
+            <div id="cabecalhoDir"><!--Inicio div cabecalhoDir-->
+                <p id="plink">
+                    <a class="linkRedes" href="https://www.facebook.com/senacrsoficial" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_facebook.png')}}"
+                            alt="Logotipo Facebook" title="Logotipo Facebook" />
+                    </a>
+                    <a class="linkRedes" href="https://x.com/senacrs" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_twitter.png')}}"
+                            alt="Logotipo X-Twitter" title="Logotipo X-Twitter" />
+                    </a>
+                    <a class="linkRedes" href="https://www.linkedin.com/school/senac-rs/posts/?feedView=all"
+                        target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_linkedin.png')}}"
+                            alt="Logotipo Linkedin" title="Logotipo Linkedin" />
+                    </a>
+                    <a class="linkRedes" href="https://www.youtube.com/senacrsoficial" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_youtube.png')}}"
+                            alt="Logotipo Youtube" title="Logotipo Youtube" />
+                    </a>
+                    <a class="linkRedes" href="https://www.instagram.com/senacrs/" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_instagram.png')}}"
+                            alt="Logotipo Instagram" title="Logotipo Instagram" />
+                    </a>
+                </p>
+            </div><!--Inicio div cabecalhoDir-->
+        </section><!--Fim section cabecalho-->
+    </header>
+    <hr class="hr1" />
+    <nav id="menu"><!--Inicio nav menu-->
+        <ul>
+            <li>
+                <a href="{{ url_for('index')}}">Inicio</a>
+            </li>
+            <li>
+                <a href="{{ url_for('oprograma')}}">O programa</a>
+            </li>
+            <li>
+                <a href="{{ url_for('inscrever')}}">Inscrição</a>
+            </li>
+            <li>
+                <a href="{{ url_for('consulta')}}">Consulta</a>
+                <ul>
+                    <li>
+                        <a href="{{ url_for('consulta')}}#tecnico">Curso Técnico</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('consulta')}}#trilha">Curso RS-TI</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('consulta')}}#livre">Curso LivreI</a>
+                    </li>
+                </ul>
+            </li>
+            <li>
+                <a href="{{ url_for('perguntas')}}">FAQ</a>
+            </li>
+            <li>
+                <a href="{{ url_for('fale_conosco')}}">Fale conosco</a>
+            </li>
+        </ul>
+    </nav><!--Fim nav menu-->
+    <!-- Comentário no html-->
+    <hr id="hr2" />
+    <section id="sectionMeio"><!--Inicio sectionMeio-->
+        <article id="articleBannerSup"><!--Inicio articleBannerSup-->
+            <img id="imgBanner" src="{{ url_for('static', filename='img/banner_programa.jpg')}}" alt="Imagem representando o banner do programa 
+            Senac gratuidade" title="Banner programa Senac Gratuidade" />
+        </article><!--Fim articleBannerSup-->
+    </section>
+    <h1 class="h2">Como se inscrever</h1>
+    <p class="p1">
+        <img id="imgBannerInscricao" src="{{ url_for('static', filename='img/incricao.png')}}" alt="Imagem de uma pessoa digitando no computador"
+            title="Inscrição no computador para o programa" />
+    </p>
+    <p class="pJustify">
+        O ingresso nos cursos do PSG se dá por ordem de inscrição do candidato. Portanto acompanhe a divulgação dos
+        cursos e programações do Senac de seu estado e conheça a oferta de vagas gratuitas em unidades mais próximas.
+        <br />
+        Para realizar a sua inscrição você deve estar atento a documentação necessária, segundo o curso escolhido.
+        <br />
+        No ato da inscrição, o interessado preencherá a “Ficha de Inscrição” com informações pessoais e será informado
+        dos documentos necessários, data e local para efetivação da sua matrícula. Fique atento! A não apresentação de
+        quaisquer dos documentos exigidos, importará no cancelamento da inscrição.
+        <br />
+        A inscrição direta do interessado não se aplica aos cursos de Aprendizagem Profissional Comercial, pois por
+        determinação da legislação e normas vigentes, essa inscrição deve ser feita pelo empregador.
+    </p>
+    <h2 id="h3">
+        Dúvidas sobre o programa Senac gratuidade, entre em contato ou procure a nossa
+        unidade do Senac Tech para mais informações.
+    </h2>
+    <p class="pText">
+        Av. Venâncio Aires 93, cidade baixa, Porto Algre, RS.
+        <br />
+        Telefone: (51) 32887750
+        <br />
+        E-mail: pdgtech@senacrs.com.br
+    </p>
+    <p class="p1">
+        <iframe id="iframeMaps"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d110521.33166140433!2d-51.36308845664062!3d-30.0428357!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x951978567f17f28d%3A0x2c2c5272bacf4d3a!2sSenac%20Tech!5e0!3m2!1spt-BR!2sbr!4v1765284497250!5m2!1spt-BR!2sbr"
+            allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </p>
+    <footer>
+        <hr id="hr4" />
+        <article id="articleFooter"><!--Inicio articleFooter-->
+            <p class="p1">
+                <img src="{{ url_for('static', filename='img/logo_branco.png')}}" alt="Imagem do logotipo 
+                do Senac" title="Logotipo Senac" />
+            </p>
+            <p class="p1">
+                <a class="linkRedes" href="https://www.facebook.com/senacrsoficial" target="_blank">
+                    <img class="imgRedes" src="{{ url_for('static', filename='img/icon_facebook.png')}}" alt="Logotipo Facebook"
+                        title="Logotipo Facebook" />
+                </a>
+                <a class="linkRedes" href="https://x.com/senacrs" target="_blank">
+                    <img class="imgRedes" src="{{ url_for('static', filename='img/icon_twitter.png')}}" alt="Logotipo X-Twitter"
+                        title="Logotipo X-Twitter" />
+                </a>
+                <a class="linkRedes" href="https://www.linkedin.com/school/senac-rs/posts/?feedView=all"
+                    target="_blank">
+                    <img class="imgRedes" src="{{ url_for('static', filename='img/icon_linkedin.png')}}" alt="Logotipo Linkedin"
+                        title="Logotipo Linkedin" />
+                </a>
+                <a class="linkRedes" href="https://www.youtube.com/senacrsoficial" target="_blank">
+                    <img class="imgRedes" src="{{ url_for('static', filename='img/icon_youtube.png')}}" alt="Logotipo Youtube"
+                        title="Logotipo Youtube" />
+                </a>
+                <a class="linkRedes" href="https://www.instagram.com/senacrs/" target="_blank">
+                    <img class="imgRedes" src="{{ url_for('static', filename='img/icon_instagram.png')}}" alt="Logotipo Instagram"
+                        title="Logotipo Instagram" />
+                </a>
+            </p>
+            <p id="pDireitos">
+                © Todos os direitos reservados - 2026
+            </p>
+        </article><!--Fim articleFooter-->
+    </footer>
+</body>
+
+</html>

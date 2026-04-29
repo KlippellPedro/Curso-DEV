@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Programa Senac de gratuidade</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="shortcut icon" type="image/x-icon" href="{{ url_for('static', filename='img/favicon.ico') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/reset.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/estilo.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/layout2.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/formulario.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/menu.css') }}">
+</head>
+
+<body>
+    <main>
+        <header>
+            <section id="cabecalho"><!--Inicio section cabecalho-->
+                <div id="cabecalhoEsq"><!--Inicio div cabecalhoEsq-->
+                    <p class="p1">
+                        <a href="{{ url_for('index') }}">
+                            <img src="{{ url_for('static', filename='img/senac_logo_new.png') }}" alt="Logotipo Senac"
+                                title="Logotipo Senac">
+                        </a>
+                    </p>
+                </div><!--Fim div cabecalhoEsq-->
+                <div id="cabecalhoMeio"><!--Inicio div cabecalhoMeio-->
+                    <p id="pCabecalhoMeio">
+                        Rio Grande do Sul
+                    </p>
+                </div><!--Fim div cabecalhoMeio-->
+                <div id="cabecalhoDir"><!--Inicio div cabecalhoDir-->
+                    <p id="plink">
+                        <a class="linkRedes" href="https://www.facebook.com/senacrsoficial" target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_facebook.png') }}"
+                                alt="Logotipo Facebook" title="Logotipo Facebook">
+                        </a>
+
+                        <a class="linkRedes" href="https://x.com/senacrs" target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_twitter.png') }}"
+                                alt="Logotipo X-Twitter" title="Logotipo X-Twitter">
+                        </a>
+
+                        <a class="linkRedes" href="https://www.linkedin.com/school/senac-rs/posts/?feedView=all"
+                            target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_linkedin.png') }}"
+                                alt="Logotipo Linkedin" title="Logotipo Linkedin">
+                        </a>
+
+                        <a class="linkRedes" href="https://www.youtube.com/senacrsoficial" target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_youtube.png') }}"
+                                alt="Logotipo Youtube" title="Logotipo Youtube">
+                        </a>
+
+                        <a class="linkRedes" href="https://www.instagram.com/senacrs/" target="_blank">
+                            <img class="imgRedes" src="{{ url_for('static', filename='img/icon_instagram.png') }}"
+                                alt="Logotipo Instagram" title="Logotipo Instagram">
+                        </a>
+                    </p>
+                </div><!--Inicio div cabecalhoDir-->
+            </section><!--Fim section cabecalho-->
+        </header>
+        <hr class="hr1" />
+        <section>
+            <input type="checkbox" id="bt_menu" />
+            <label for="bt_menu">&#9776;</label>
+            <nav id="menu"><!--Inicio nav menu-->
+                <ul>
+                    <li>
+                        <a href="{{ url_for('index') }}">Inicio</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('oprograma') }}">Programa</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('inscrever') }}">Inscrever</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('consulta') }}">Consulta</a>
+                        <ul>
+                            <li>
+                                <a href="{{ url_for('consulta') }}#tecnico">Técnico</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('consulta') }}#trilha">Trilha</a>
+                            </li>
+                            <li>
+                                <a href="{{ url_for('consulta') }}#livre">Livre</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('perguntas') }}">FAQ</a>
+                    </li>
+                    <li>
+                        <a href="{{ url_for('fale_conosco') }}">Fale conosco</a>
+                    </li>
+                </ul>
+            </nav><!--Fim nav menu-->
+        </section>
+        <!-- Comentário no html-->
+        <hr id="hr2" />
+        <section id="sectionMeio"><!--Inicio sectionMeio-->
+            <article id="articleBannerSup"><!--Inicio articleBannerSup-->
+                <img id="imgBanner" src="{{ url_for('static', filename='img/banner_programa.jpg') }}"
+                    alt="Imagem representando o banner do programa Senac gratuidade"
+                    title="Banner programa Senac Gratuidade" />
+            </article><!--Fim articleBannerSup-->
+        </section>
+        <!--Nova formatação para o formulário, utilizando fieldset-->
+        <section id="sectionForm"><!--Inicio sectionForm-->
+            <article id="articleForm"><!--Inicio articleForm-->
+                <p id="formP">
+                    Fale conosco
+                </p>
+                <form action="{{ url_for('fale_conosco') }}" method="post">
+
+                    <fieldset>
+
+                        <!-- NOME -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+                                <label>Nome:</label>
+                                <input type="text" id="nome" name="nome" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- SOBRENOME -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+                                <label>Sobrenome:</label>
+                                <input type="text" id="snome" name="snome" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- DATA NASCIMENTO -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+                                <label>Data de nascimento:</label>
+                                <input type="date" id="datanasc" name="datanasc" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- ENDEREÇO -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+                                <label>Endereço:</label>
+                                <input type="text" id="endereco" name="endereco" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- BAIRRO -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+                                <label>Bairro:</label>
+                                <input type="text" id="bairro" name="bairro" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- CIDADE -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+                                <label>Cidade:</label>
+                                <input type="text" id="cidade" name="cidade" required>
+                            </div>
+                        </fieldset>
+
+                        <!-- ESTADO -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+
+                                <label>Estado:</label>
+
+                                <select name="estado" id="estado">
+
+                                    <option value="AC">Acre</option>
+                                    <option value="AL">Alagoas</option>
+                                    <option value="AP">Amapá</option>
+                                    <option value="AM">Amazonas</option>
+                                    <option value="BA">Bahia</option>
+                                    <option value="CE">Ceará</option>
+                                    <option value="DF">Distrito Federal</option>
+                                    <option value="ES">Espírito Santo</option>
+                                    <option value="GO">Goiás</option>
+                                    <option value="MA">Maranhão</option>
+                                    <option value="MT">Mato Grosso</option>
+                                    <option value="MS">Mato Grosso do Sul</option>
+                                    <option value="MG">Minas Gerais</option>
+                                    <option value="PA">Pará</option>
+                                    <option value="PB">Paraíba</option>
+                                    <option value="PR">Paraná</option>
+                                    <option value="PE">Pernambuco</option>
+                                    <option value="PI">Piauí</option>
+                                    <option value="RJ">Rio de Janeiro</option>
+                                    <option value="RN">Rio Grande do Norte</option>
+                                    <option value="RS" selected>Rio Grande do Sul</option>
+                                    <option value="RO">Rondônia</option>
+                                    <option value="RR">Roraima</option>
+                                    <option value="SC">Santa Catarina</option>
+                                    <option value="SP">São Paulo</option>
+                                    <option value="SE">Sergipe</option>
+                                    <option value="TO">Tocantins</option>
+
+                                </select>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- SEXO -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+
+                                <label>Sexo:</label>
+
+                                <label>
+                                    <input type="radio" name="sexo" value="M" checked> Masculino
+                                </label>
+
+                                <label>
+                                    <input type="radio" name="sexo" value="F"> Feminino
+                                </label>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- TELEFONE -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+
+                                <label>Telefone:</label>
+
+                                <input type="tel" id="telefone" name="telefone" title="Digite 11 números incluindo DDD"
+                                    pattern="[0-9]{11}" required>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- EMAIL -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+
+                                <label>E-mail:</label>
+
+                                <input type="email" id="email" name="email" title="Formato: nome@dominio.com"
+                                    pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" required>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- USUARIO -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+
+                                <label>Usuário:</label>
+
+                                <input type="text" id="usuario" name="usuario" required>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- SENHA -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+
+                                <label>Senha:</label>
+
+                                <input type="password" id="senha" name="senha"
+                                    title="A senha deve ter no mínimo 8 caracteres, com letra maiúscula, minúscula e número"
+                                    pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" required>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- OBSERVAÇÃO -->
+                        <fieldset class="bloco">
+                            <div class="dados">
+
+                                <label>Observação:</label>
+
+                                <textarea name="obs" id="obs" rows="4" cols="30"></textarea>
+
+                            </div>
+                        </fieldset>
+
+                        <!-- BOTÃO -->
+                        <button type="submit" class="botao">
+                            Enviar
+                        </button>
+
+                    </fieldset>
+
+                </form>
+            </article><!--Fim articleForm-->
+        </section><!--Fim sectionForm-->
+        <footer>
+            
+            <hr id="hr4" />
+            <article id="articleFooter"><!--Inicio articleFooter-->
+                <p class="p1">
+                    <a href="{{ url_for('index') }}">
+                        <img src="{{ url_for('static', filename='img/logo_branco.png') }}" alt="Logotipo Senac"
+                            title="Logotipo Senac">
+                    </a>
+                </p>
+                <p class="p1">
+                    <a class="linkRedes" href="https://www.facebook.com/senacrsoficial" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_facebook.png') }}"
+                            alt="Logotipo Facebook" title="Logotipo Facebook">
+                    </a>
+
+                    <a class="linkRedes" href="https://x.com/senacrs" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_twitter.png') }}"
+                            alt="Logotipo X-Twitter" title="Logotipo X-Twitter">
+                    </a>
+
+                    <a class="linkRedes" href="https://www.linkedin.com/school/senac-rs/posts/?feedView=all"
+                        target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_linkedin.png') }}"
+                            alt="Logotipo Linkedin" title="Logotipo Linkedin">
+                    </a>
+
+                    <a class="linkRedes" href="https://www.youtube.com/senacrsoficial" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_youtube.png') }}"
+                            alt="Logotipo Youtube" title="Logotipo Youtube">
+                    </a>
+
+                    <a class="linkRedes" href="https://www.instagram.com/senacrs/" target="_blank">
+                        <img class="imgRedes" src="{{ url_for('static', filename='img/icon_instagram.png') }}"
+                            alt="Logotipo Instagram" title="Logotipo Instagram">
+                    </a>
+                </p>
+                <p id="pDireitos">
+                    © Todos os direitos reservados - 2026
+                </p>
+            </article><!--Fim articleFooter-->
+        </footer>
+    </main>
+</body>
+
+</html>

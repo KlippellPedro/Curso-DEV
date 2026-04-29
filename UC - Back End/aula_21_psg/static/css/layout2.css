@@ -1,0 +1,143 @@
+main{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;    
+}
+header{
+    width: 100%;
+    height: auto;
+}
+#cabecalho{
+    width: 100%;
+    height: auto;
+    display: flex;
+}
+#cabecalhoEsq, #cabecalhoMeio, #cabecalhoDir{
+    width: 33.33%;
+    height: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#cabecalhoDir{
+    display: block;
+}
+
+#sectionMeio{
+    width: 100%;
+    height: auto;
+}
+#articleBannerSup{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+#articleInformacoesSup{
+    width: 99.5%;
+    height: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+#articleBannerPsg{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.articleCursos{
+    width: 100%;
+    height: auto;
+    margin: 0;
+}
+.divTextCursos{
+    width: 95%;
+    height: auto;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+.divCardsCursos{
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    justify-content: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.divCursos{
+    width: 33.33%;
+    height: auto;
+}
+footer{
+    width: 100%;
+    height: auto;
+}
+
+#articleFooter{
+    width: 100%;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    background-color: #ffa500;
+}
+@media all and (max-width: 1100px){
+    .articleCursos{
+        width: 100%;
+        height: auto;
+    }
+    .divCardsCursos{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .divCursos{
+        width: 50%;
+        height: auto;
+        float: left;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+    }
+}
+@media all and (max-width: 750px){
+    .divCardsCursos{
+        width: 100%;
+        height: auto;
+        display: block;
+    }
+    .divCursos{
+        width: 98%;
+        height: auto;
+        float: left;
+    }
+    #cabecalhoEsq{
+        width: 50%;
+        height: auto;
+    }
+    #cabecalhoMeio{
+        display: none;
+    }
+    #cabecalhoDir{
+        width: 50%;
+        height: auto;
+        margin-top: 4%;
+        margin-bottom: 1%;
+    }
+    
+}
+@media all and (max-width: 600px){
+    #cabecalho{
+        width: 100%;
+        height: auto;
+        margin: 0 auto;
+        display: block;
+       
+    }
+    #cabecalhoEsq, #cabecalhoDir{
+        width: 100%;
+        height: auto;
+                
+    }
+    #cabecalhoMeio{
+        display: none;
+    }
+}
+
+

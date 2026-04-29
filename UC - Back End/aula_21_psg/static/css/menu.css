@@ -1,0 +1,92 @@
+#menu{
+    width: 100%;
+    height: 46px;
+    background-color: #222;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+}
+#menu ul{
+    list-style: none;
+    position: relative;
+}
+#menu ul li{
+    width: 150px;
+    float: left;
+}
+#menu a{
+    padding: 15px;
+    display: block;
+    background-color: #222;
+    text-decoration: none;
+    text-align: center;
+    color: #fff;
+}
+#menu ul ul{
+    position: absolute;
+    visibility: hidden;
+}
+#menu ul li:hover ul{
+    visibility: visible;
+}
+#menu a:hover{
+    background-color: #f4f4f4;
+    color: #555;
+}
+#menu ul ul li{
+    float: none;
+    border-bottom: solid 1px #ccc;
+}
+#menu ul ul li a{
+    background-color: green;
+}
+label[for="bt_menu"]{
+    padding: 1%;
+    background-color: #222;
+    color: #fff;
+    text-align: right;
+    font-size: 30px;
+    cursor: pointer;
+    height: auto;
+}
+#bt_menu{
+    display: none;
+}
+label[for="bt_menu"]{
+    display: none;
+}
+#bt_menu:checked ~ #menu{
+    margin-left: 0;
+}
+@media all and (max-width: 950px){
+    #sectionMenuInf{
+        display: none;
+    }
+    label[for="bt_menu"]{
+        display: block;
+    }
+    #bt_menu:checked ~ #menu{
+        margin-left: 0;
+        height: auto;
+    }
+    #menu{
+        display: block;
+        margin-left: -100%;
+        transition: all 1s;
+        height: 0;
+    }
+    #menu ul li{
+        width: 100%;
+        height: auto;
+    }
+    #menu ul ul{
+        position: static;
+        overflow: hidden;
+        max-height: 0;
+        transition: all 4s;
+    }
+    #menu ul li:hover ul{
+        height: auto;
+        max-height: 200px;
+    }
+}
