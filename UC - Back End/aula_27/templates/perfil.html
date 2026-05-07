@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfil</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; text-align: center;}
+        input,button {margin: 5px; padding: 10px;}
+    </style>
+</head>
+<body>
+    <h2>Atualizar</h2>
+    <form method="post">
+        Nome: <input type="text" name="nome" placeholder="Pedro Klippel" value="{{user.nome}}"><br>
+        Email: <input type="email" name="email" placeholder="teste@gmail.com" value="{{user.email}}"><br>
+        <button type="submit">Atualizar</button>
+    </form>
+    <a href="/logout">Logout</a>
+</body>
+</html>
