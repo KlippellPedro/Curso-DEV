@@ -23,4 +23,5 @@ class Conexao:
         """)
 
         conn.commit()
+        cursor.close()
         conn.close()
