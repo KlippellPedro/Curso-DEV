@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; text-align: center;}
+    </style>
+</head>
+<body>
+    <h1>Sistema</h1>
+    {% with messages = get_flashed_messages() %} <!-- Mensagem -->
+        {% for msg in messages %}
+            <p>{{ msg }}</p>
+        {% endfor %}
+    {% endwith %}
+    <hr>
+    {% block content %}{% endblock %}
+</body>
+</html>

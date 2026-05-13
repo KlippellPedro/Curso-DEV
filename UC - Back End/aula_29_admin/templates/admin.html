@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel ADM</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; text-align: center;}
+    </style>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
+    <h2>Painel ADM</h2>
+    <a href="/logout">
+        <button>Sair</button>
+    </a>
+    <hr>
+    <h3>Criar Usuario</h3>
+    <form method="post" action="/admin/create">
+        <input type="text" name="nome" placeholder="Nome" required><br>
+        <input type="text" name="email" placeholder="Exemplo@gmail.com" required><br>
+        <input type="password" name="senha" placeholder="Senha" required><br>
+        <button>Criar</button>
+    </form>
+    <hr>
+    <h3>Lista de usuários</h3>
+    <ul>
+        {% for u in users %}
+        <li>
+            {{ u.nome }} - {{ u.email }}
+            <a href="/admin/edit/{{ u.id }}">
+                <button>Editar</button>
+            </a>
+            <a href="/admin/delete/{{ u.id }}">
+                <button>Excluir</button>
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>
