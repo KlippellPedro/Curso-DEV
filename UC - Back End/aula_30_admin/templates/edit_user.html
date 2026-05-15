@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/css/global.css">
+    <title>Editar Usuario</title>
+</head>
+<body>
+    {% extends 'base.html' %} <!-- herda layout -->
 
+    {% block content %}
+
+    <h2>Editar Usuário</h2>
+
+    <!-- foto atual -->
+    <img src="/static/uploads/{{user.foto}}" width="120">
+
+    <br><br>
+
+    <form method="POST" enctype="multipart/form-data">
+
+        <!-- nome -->
+        <label>Nome:</label><br>
+        <input type="text" name="nome" value="{{user.nome}}" required>
+        <br><br>
+
+        <!-- email -->
+        <label>Email:</label><br>
+        <input type="email" name="email" value="{{user.email}}" required>
+        <br><br>
+
+        <!-- nova foto -->
+        <label>Foto:</label><br>
+        <input type="file" name="foto">
+        <br><br>
+
+        <button type="submit">Salvar</button>
+
+    </form>
+
+    <br>
+
+    <a href="/admin">
+        <button>Voltar</button>
+    </a>
+
+    {% endblock %}
+</body>
+</html>

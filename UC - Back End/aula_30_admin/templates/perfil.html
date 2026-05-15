@@ -1,1 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../statics/css/global.css">
+    <title>Perfil</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+    {% block content %}
 
+    <h2>Perfil</h2>
+
+    <img src="/static/uploads/{{user.foto}}" width="100">
+
+    <p>{{user.nome}}</p>
+
+    <form method="POST" enctype="multipart/form-data">
+    <input name="nome" value="{{user.nome}}">
+    <input name="email" value="{{user.email}}">
+    <input type="file" name="foto">
+    <button>Salvar</button>
+    </form>
+
+    <a href="/logout">Sair</a>
+
+    {% endblock %}
+</body>
+</html>
